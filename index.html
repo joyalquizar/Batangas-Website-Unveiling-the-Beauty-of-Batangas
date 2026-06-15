@@ -1,0 +1,921 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batangas Tour and travel agency website design</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="images/p-2.jpg">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- wow js -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- owl crouse css file  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fakeLoader.min.css">
+    <!-- scroling aos.css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+
+   
+</head>
+
+<body>
+<!-- header section starts -->
+
+
+</header>
+  <header class="wow fadeInDown" data-wow-duration="4s" >
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo"><img src="images/logos.gif" alt="logo"></a>
+  
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#book">book</a>
+    <a href="#packages">packages</a>
+    <a href="#services">services</a>
+    <a href="#gallery">gallery</a>
+    <a href="#review">review</a>
+    <a href="#contact">contact</a>
+  </nav>
+
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+    <i class="fas fa-user" id="login-btn"></i>
+  </div>
+
+  <form action="" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+  </form>
+
+</header>
+
+ <!-- header section ends -->
+ <div class="auth-forms-container">
+
+<!-- login form container  -->
+ 
+            <div class="login-form-container">
+                <form action="login.php" method="POST" id="login-Form">
+                <i class="fas fa-times" id="form-close"></i>
+                <form method="POST" action="login.php">
+        
+                    <h3>Login</h3>
+                    <input type="email" class="box" name="email" placeholder="enter your email" required>
+                    <input type="password" class="box" name="password" id="password" placeholder="enter your password" required>
+                    <input type="submit" value="Login Now" class="btn">
+                    <input type="checkbox" id="showpassword">
+                    <label for="showpassword">Show Password?</label>
+                    <p>Don't have an account? <a href="#" id="register-click">Register now</a></p>
+                </form>
+               
+            </div>
+         <!-- Register Form -->
+    <div class="register-form-container">
+        <form action="register.php" method="POST" id="registerForm">
+        <i class="fas fa-times" id="register-close"></i>
+        <form method="POST" action="register.php">
+            <h3>Register Now</h3>
+            <input type="email" class="box" name="email" placeholder="enter your email" required>
+            <input type="text" class="box" name="username" placeholder="enter your username" required>
+            <input type="password" class="box" name="password" id="reg-password" placeholder="enter your password" required>
+            <input type="password" class="box" name="confirm_password" id="confirm_password" placeholder="confirm your password" required>
+            <input type="submit" value="Register Now" class="btn">
+            <input type="checkbox" id="show-reg-password">
+            <label for="show-reg-password">Show Password?</label>
+            <p>Already have an account? <a href="#" id="login-click">Login now</a></p>
+        </form>
+    </div>
+
+
+        
+<!-- home section starts -->
+
+
+<section class="home"  id="home">
+
+    <div class="content wow fadeInUp"data-wow-duration="4s">
+        <h3 style="font-size: 9em; color: rgb(221, 255, 0); font-weight: bold; font-family: serif; text-shadow: 3px 3px 5px black;">
+            Unveiling the Beauty of Batangas<span></span>
+        </h3>
+        <h3>Live the journey, cherish the <span>memories</span></h3>
+        <p>dicover new places with us, adventure awaits</p>
+        <a href="https://ilovelobo.ph/" class="btn" target="_blank">Discover More</a>
+
+    </div>  
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/Ivid-1.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="images/Ivid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- book section starts  -->
+
+<section class="book wow fadeInUp" data-wow-duration="4s" id="book" >
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image " data-aos="fade-right"
+        data-aos="fade-right"
+        data-aos-offset="10"
+        data-aos-duration="500">
+            <img src="images/booknow1.png" alt="">
+        </div>
+
+        <form onsubmit="showLoginFirstMessage(event)">
+       
+            <div class="inputBox">
+                <h3>where to</h3>
+                <input type="text" placeholder="place name">
+            </div>
+            <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn btn-submit" value="book now">
+        </form>
+        <script>
+            function showLoginFirstMessage(event) {
+                // Prevent the form from submitting
+                event.preventDefault();
+        
+                // Show the alert
+                alert("Sorry, you must Login first");
+            }
+        </script>
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading wow fadeIn">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container owl-carousel first_carousel">
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-1.jpg" data-lightbox="image-1" data-title="Taal Volcano"><img src="images/pp-1.jpg" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Taal Volcano </h3>
+                <p>Taal Volcano is located about 60 km (about 37 miles) south of Metro Manila. Last major eruption was reported back in 1965 that affected villages in the surrounding area.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱9,661 <span>₱12,00.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-2.jpg" data-lightbox="image-1" data-title="Caleruega"><img src="images/pp-2.jpg" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Caleruega </h3>
+                <p>This church is on top of the hill in nasugbu, batangas, it is good for a wedding venue for its perfect view. Caleruega church is also known as the Transfiguration Chapel. </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱400.00 <span>₱560.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-3.png" data-lightbox="image-3" data-title="J Castles Theme Park"><img src="images/pp-3.png" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> J Castles Theme Park </h3>
+                <p>Enjoy an exclusive bundle pass to 19 Exhibits and gush over the wonders and attractions that Studio and Pop Castle have to offer</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱899.00 <span>₱999.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-4.png" data-lightbox="image-4" data-title="Palm Beach Resort"><img src="images/pp-4.png" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Palm Beach Resort </h3>
+                <p>Rediscover paradise with your loved ones at Palm Beach Resort in Batangas, just a few hours away from Manila</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱6,789.00 <span>₱8,000.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- section item start  -->
+    <div class="box-container secound_carousel owl-carousel ">
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-5.png" data-lightbox="image-1" data-title="Water Diver Course"><img src="images/pp-5.png" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Water Diver Course </h3>
+                <p>Learn from a scuba diving expert and carry the world's most recognized scuba certification. </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱27,500.00 <span>₱30,00.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-6.png" data-lightbox="image-3" data-title="Farm at San Benito"><img src="images/pp-6.png" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Farm at San Benito </h3>
+                <p> The Farm at San Benito's incredible facilities might convince you to finally take a well-deserved break.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱38,999 <span>₱44,00.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-7.png" data-lightbox="image-4" data-title="Aquaria Water Park"><img src="images/pp-7.png" alt="image"></a>
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Aquaria Water Park </h3>
+                <p>Go for an exciting tropical getaway of pure water fun at Aquaria Water Park in Calatagan, Batangas!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱1,045.00 <span>₱2,100.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading wow fadeIn">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+           
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Batangas offers budget-friendly accommodations, 
+                from cozy inns to beachside resorts, catering to travelers who want comfort without overspending.</p>
+        </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <i class="fas fa-utensils"></i>
+            <h3>famous food</h3>
+            <p>Batangas is famous for its local delicacies like Bulalo, Kapeng Barako, and Lomi. It offers a gastronomic
+                 experience filled with authentic flavors and refreshing drinks unique to the province.</p>
+        </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <i class="fas fa-bullhorn"></i>
+            <h3>tour guide</h3>
+            <p>A tour guide ensures that tourists can enjoy Batangas responsibly, highlighting tips for safe hiking 
+                (e.g., Taal Volcano), swimming in beaches, and observing local customs and regulations.</p>
+        </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world</h3>
+            <p>Batangas showcases a variety of attractions that offer global appeal—pristine beaches, 
+                historical landmarks, and cultural experiences that rival international destinations.</p>
+        </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p>With its proximity to Metro Manila, Batangas is accessible via expressways and well-maintained
+                 roads, making it a top destination for quick weekend getaways.</p>
+        </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>Batangas is a haven for thrill-seekers, offering activities like scuba diving in Anilao, 
+                hiking in Mt. Maculot, exploring heritage sites, and island-hopping adventures.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading wow fadeIn">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box wow fadeInUp"data-wow-duration="2s"  >
+            <img src="images/gg-1.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/g-2.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/ggg-3.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/gg-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/ggg-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/gg5.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/g-7.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/g-8.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box wow fadeInUp"data-wow-duration="2s">
+            <img src="images/gg-9.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>"It's More Fun in Batangas—Where Adventure, Flavor, and Relaxation Come Together!"</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+        <span>s</span>
+        
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic1.jpg" alt="">
+                    <h3>MONKEY D. LUFFY</h3>
+                    <p>3,000,000,000</p>
+                    <p>Spectacular views from the lookouts and driving down but you cannot climb anymore. I skipped the.boat ride because I thought wasn't worth it</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic2.jpg" alt="">
+                    <h3>RONOROA ZORO</h3>
+                    <p>1,111,000,000</p>
+                    <p>first visit in 2015 was simply to visit the farm, this time it was to do the 'Stingless Bee' Workshop, a one day course coving the practical,
+                        A superb 1 hectare site this is a real life inspirational working farm - highly recommended, for beekeepers, wannabe beekeepers and anyone who wants to be inspired</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic3.jpg" alt="">
+                    <h3>VINSMOKE SANJI</h3>
+                    <p>1,032,000,000</p>
+                    <p>This Twin Lakes establishment is a place with restaurants , coffee shops , convenience store and viewing deck of Taal Lake and the namesake hotel . Based on the TA reviews , this is much different from the Twin Lakes hotel on the lower level .</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic4.jpg" alt="">
+                    <h3>JIMBE</h3>
+                    <p>1,100,000,000</p>
+                    <p>It was an unplanned travel that went so well. We just walked in, and luckily, there were still available rooms for an overnight stay. 
+                        Accommodating and professional staff, clean rooms; including the CR/shower area, and well maintained facilities.
+                         It was low tide when we arrived...</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic5.jpg" alt="">
+                    <h3>NAMI</h3>
+                    <p>366,000,000</p>
+                    <p>Nice lake. Took a boat ride to the center island but tourists aren’t (yet) allowed on it because apparently it’s still active. Lots of small fish net farms on the lake. Views from Tagaytay were impressive and weather is cooler up along the crater rim.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+       
+        <div class="swiper-slide">
+            <div class="box">
+                <img src="images/pic66.jpg" alt="">
+                <h3>NICO ROBIN</h3>
+                <p>930,000,000</p>
+                <p>A stately landmark in Taal town. Popular for weddings - we saw two back-to-back! Wonderful to visit.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <img src="images/pic7.jpeg" alt="">
+                <h3>DR. CHOPPER</h3>
+                <p>100,000,000</p>
+                <p>You must have the tourist map to know where to go and what to see, but it is not easy to get hold of especially on Monday when everything is closed.
+                    I have not seen this information anywhere, so I hope it will be helpful to those thinking of going to Taal.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="box">
+                <img src="images/pic8.jpg" alt="">
+                <h3>SUPER FRANKY</h3>
+                <p>394,000,000</p>
+                <p>It was love at first sight for me when I first stepped into this place early in February. So I went back to enjoy the sun and the sea. Very nice for a quick get-away from the city — fine sand, very clean beach, cool breeze. 
+                    I love that it is exclusive for lot owners and residents and their guests...   </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="box">
+                <img src="images/pic9.jpg" alt="">
+                <h3>SOUL KING BROOK</h3>
+                <p>383,000,000</p>
+                <p>It was an unplanned travel that went so well. We just walked in, and luckily, there were still available rooms for an overnight stay. Accommodating and professional staff, clean rooms; 
+                    including the CR/shower area, and well maintained facilities....</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="box">
+                <img src="images/pic10.jpg" alt="">
+                <h3>GOD USOP</h3>
+                <p>500,000,000</p>
+                <p>We travelled to Batangas with barely enough sleep. I wonder sometimes why we do this to ourselves, but hey, we had much fun! 😉</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <video src="images/con1.mp4" id="videos-slider" loop autoplay muted></video>
+        </div>
+
+        <form onsubmit="showLoginFirstMessage(event)">
+            <div class="inputBox">
+                <input type="text" name="name" placeholder="Name:">
+                <input type="email" name="email" placeholder="Email:">
+            </div>
+            <div class="inputBox">
+                <input type="number" name="number" placeholder="Number:">
+                <input type="text" name="subject" placeholder="Subject:">
+            </div>
+            <textarea name="message" placeholder="Message:" cols="30" rows="10"></textarea>
+        
+            <input type="submit" class="btn btn-submit" value="Send Message">
+        </form>
+        
+        <script>
+            function showLoginFirstMessage(event) {
+                // Prevent the form from submitting
+                event.preventDefault();
+        
+                // Show the alert
+                alert("Sorry,You must Login first");
+            }
+        </script>
+        
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p> WE ARE GROUP DSA FROM 2C BSCPE 2ND YEAR COLLEGE STUDENT FROM COLEGIO DE MONTALBAN </p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">BATANGAS CITY</a>
+            <a href="#">NASUGBO</a>
+            <a href="#">CALATAGAN</a>
+            <a href="#">SAN JUAN</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>  
+            <a href="https://www.facebook.com/EJAlquizar">facebook</a>
+            <a href="https://www.instagram.com/robin_chwaa/profilecard/?igsh=OGl3ajRhcWpsaXpi">instagram</a>
+            <a href="https://x.com/missalquizar_?t=rdTSxKt6nAMR96TS3ogvVw&s=09">twitter</a>
+            <a href="https://www.raket.ph/joyalquizar14">Raket.ph</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> alquizarjoy </span> | all rights reserved! </h1>
+
+</section>
+<!-- top to bottom scrolling  -->
+<div id="totopscroller"></div>
+<!-- preloader  -->
+<div class="fakeLoader"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jaquery cdn  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Load ripples plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+<!-- swiper-bundle.min.js -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- wow js -->
+<script src="js/wow.min.js"></script>
+<!-- lightbox.js -->
+<script src="js/lightbox.js"></script>
+<!-- owl.carousel.min.js -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- top to bottom  -->
+<script src="js/jquery.totop.js"></script>
+<script src="js/fakeLoader.min.js"></script>
+<!-- scroling aos js  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
+
+<script>
+    // owl carousel
+    $('.first_carousel').owlCarousel({
+    autoplay:true,
+    margin:10,
+    smartSpeed: 1000,
+    nav:true,
+    responsiveClass:true,
+
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+           
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:true,
+          
+        }
+    }
+})
+
+// secound carousel 
+ // owl carousel
+ $('.secound_carousel').owlCarousel({
+    autoplay:true,
+    rtl:true,
+    nav:true,
+    margin:10,
+    responsiveClass:true,
+    smartSpeed: 1000,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+           
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:true,
+          
+        }
+    }
+})
+
+// top ot bottom 
+$(function(){
+$('#totopscroller').totopscroller({
+URL:'http://localhost/batangaswebsite/index.html'
+});
+})
+
+// wow js 
+
+// preloader
+$.fakeLoader();
+
+// aos scrolling  
+AOS.init();
+  //  water Remote Playback
+    $('.water').ripples({
+
+      // Image Url
+      imageUrl: null,
+
+      // The width and height of the WebGL texture to render to. 
+      // The larger this value, the smoother the rendering and the slower the ripples will propagate.
+      resolution: 256,
+
+      // The size (in pixels) of the drop that results by clicking or moving the mouse over the canvas.
+      dropRadius: 20,
+
+      // Basically the amount of refraction caused by a ripple. 
+      // 0 means there is no refraction.
+      perturbance: 0.04,
+
+      // Whether mouse clicks and mouse movement triggers the effect.
+      interactive: true,
+
+      // The crossOrigin attribute to use for the affected image. 
+      crossOrigin: ''
+    });
+   
+</script>
+<script>
+    $(document).ready(function() {
+       // Apply ripples effect (ensure the correct selector)
+       $('selector').ripples();  // Corrected to use a semicolon
+    });
+</script>
+</body> 
+</html>
+ 

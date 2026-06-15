@@ -1,0 +1,1850 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="images/p-2.jpg">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- wow js -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+   
+    <!-- owl crouse css file  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fakeLoader.min.css">
+    <!-- scroling aos.css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+    
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/adminstyle.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/logout.css">
+
+  
+</head>
+
+<body>
+<!-- header section starts -->
+
+
+</header>
+  <header class="wow fadeInDown" data-wow-duration="4s" >
+
+  <div id="menu-bar" class="fas fa-bars"></div>
+
+  <a href="#" class="logo"><img src="images/logos.gif" alt="logo"></a>
+  
+  <nav class="navbar">
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#reserve">reserve</a>
+    <a href="#book">mybook</a>
+    <a href="#packages">packages</a>
+    <a href="#services">services</a>
+    <a href="#contact">contact</a>
+  </nav>
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+   
+        <button onclick="logout()">Log Out</button>
+        <script>
+            function logout() {
+                fetch('logout.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'logout=true'
+                }).then(() => {
+                    window.location.href = 'index.html';
+                }).catch(error => console.error('Logout failed:', error));
+            }
+        </script>
+         
+  </div>
+
+  <form action="" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+  </form>
+  </header>
+  <div class="auth-forms-container">
+
+
+
+</div>
+
+
+
+</header>
+
+
+
+<section class="home"  id="home">
+
+    <div class="content wow fadeInUp"data-wow-duration="4s">
+        <h3 style="font-size: 9em; color: rgb(230, 255, 2); font-weight: bold; font-family: serif; text-shadow: 3px 3px 5px rgb(29, 3, 3);">
+            Welcome to the Beauty of Batangas<span></span>
+        </h3>
+        <h3>Live the journey, cherish the <span>memories</span></h3>
+        <p>dicover new places with us, adventure awaits</p>
+        <a href="https://ilovelobo.ph/" class="btn" target="_blank">Discover More</a>
+
+    </div>  
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-5.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/Ivid-1.mp4"></span>
+ 
+    </div>
+
+    <div class="video-container">
+        <video src="images/Ivid-2.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+    <script>
+        
+        const videoBtns = document.querySelectorAll('.vid-btn');
+    
+        videoBtns.forEach(btn => {
+            btn.addEventListener('click', function() { 
+                document.querySelector('.controls .active').classList.remove('active');
+                this.classList.add('active');
+                let src = this.getAttribute('data-src');
+                document.querySelector('#video-slider').src = src;
+                document.querySelector('#video-slider').play();
+            });
+        });
+    </script>
+</section>
+ <!-- home section ends -->
+   <!-- about section start -->
+<section class="aboutus"  id="about"></section>
+
+
+    <h1 class="heading">
+        <span>a</span>
+        <span>b</span>
+        <span>o</span>
+        <span>u</span>
+        <span>t</span>
+        <span class="space"></span>
+        <span>u</span>
+        <span>s</span>
+    </h1>
+
+    <section class="book wow fadeInUp" data-wow-duration="4s" id="about" >
+    <div class="row">
+
+        <div class="image " data-aos="fade-right"
+        data-aos="fade-right"
+        data-aos-offset="10"
+        data-aos-duration="500">
+            <img src="images/Book now-img.png" alt="">
+        </div>
+        <form action="" data-aos="fade-up"data-aos-offset="40"
+        data-aos-offset="10"
+        data-aos-duration="600">
+        <div class="inputBox">
+          
+            <div class="box">
+                
+                <h4>about</h4>
+               
+               
+                <h3 class="travel-guides">
+                    WELCOME<span class="space"></span> TO<span class="space"></span> BATANGAS</h3> 
+               
+                <p> Batangas is one of the most popular tourist destinations near Metro Manila. 
+                    It is home to the well-known Taal Volcano, one of the Decade Volcanoes, and 
+                    the small nearby town of Taal which keeps ancestral houses, churches, and other architecture 
+                    dating back to the 19th century. The province also has numerous beaches and diving spots including Anilao in Mabini,
+                     Sombrero Island in Tingloy, Ligpo Island and Sampaguita Beach in Bauan, Matabungkay in Lian, Punta Fuego in Nasugbu, 
+                     the municipality of Calatagan, and Laiya in San Juan. All of the marine waters of the province are part of the Verde 
+                     Island Passage, the center of the world's marine biodiversity.</p>
+                     <p>  A tourist attraction is a place of interest that tourists visit, typically for its inherent or an exhibited natural or
+                         cultural value, historical significance, natural or built beauty, offering leisure and amusement.</p>
+                         <p>The variety of beachfront accommodations ensures that whether </p>
+               
+                  
+            </div>
+    </form>
+
+</div>
+
+</section>
+        <!-- about section end  -->
+
+<!-- book section starts  -->
+
+
+<section class="book wow fadeInUp" data-wow-duration="4s" id="reserve" >
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>a</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+        
+    </h1>
+    <section class="redervation"  id="reserve"></section>
+    <div class="row">
+
+        <div class="image " data-aos="fade-right"
+        data-aos="fade-right"
+        data-aos-offset="10"
+        data-aos-duration="500">
+            <img src="images/booknow1.png" alt="">
+        </div>
+
+<form id="bookingForm" data-aos="fade-up" data-aos-offset="40" data-aos-duration="600">
+          
+            
+        <div class="box">
+            <h1>BOOK HERE NOW!</h1>
+            <div class="inputBox">
+                <h5>where to</h5>
+                <input type="text" id="placeName" placeholder="Place name" required>
+            </div>
+            <div class="inputBox">
+                <h5>hotel</h5>
+                <input type="text" id="hotelsName" placeholder="Hotel name" required>
+            </div>
+            <div class="inputBox">
+                <h5>how many</h5>
+                <input type="number" id="numGuests" placeholder="Number of guests" required>
+            </div>
+            <div class="inputBox">
+                <h5>arrivals</h5>
+                <input type="date" id="arrivalDate" required>
+            </div>
+            <div class="inputBox">
+                <h5>leaving</h5>
+                <input type="date" id="leavingDate" required>
+            </div>
+            <input type="submit" class="btn btn-submit" value="Book Now">
+        </form>
+    
+    </div>
+</div>
+
+<section class="book"  id="book"></section>
+   
+<!-- book information section starts  -->
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>i</span>
+        <span>n</span>
+        <span>f</span>
+        <span>o</span>
+        <span>r</span>
+        <span>m</span>
+        <span>a</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+    </h1>
+
+    <section class="reservation-container wow fadeInUp" data-wow-duration="4s" id="book">
+        <h5>Your Booking Information:</h5>
+        <table id="reservationTable" border="1" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Place</th>
+                    <th>Hotels</th>
+                    <th>Number of Guests</th>
+                    <th>Arrival Date</th>
+                    <th>Leaving Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="reservationTableBody">
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </section>
+    
+    <script>
+        let counter = 1; // To keep track of the row number
+    
+        // Function to add booking to the table
+        function addBookingToTable(place, hotels, numberOfGuests, arrivalDate, leavingDate) {
+            const tableBody = document.getElementById('reservationTableBody');
+    
+            // Create a new table row
+            const row = document.createElement('tr');
+    
+            // Populate row with cells
+            row.innerHTML = `
+                <td>${counter}</td>
+                <td><input type="text" value="${place}" class="place-input" disabled></td>
+                <td><input type="text" value="${hotels}" class="hotels-input" disabled></td>
+                <td><input type="number" value="${numberOfGuests}" class="guests-input" disabled></td>
+                <td><input type="date" value="${arrivalDate}" class="arrival-date-input" disabled></td>
+              <td><input type="date" v  alue="${leavingDate}" class="leaving-date-input" disabled></td>
+                <td><button class="edit-button" onclick="editBooking(this)">Edit</button></td>
+                <td><button class="delete-button" onclick="deleteBooking(this)">Delete</button></td>
+            `;
+    
+            // Append row to table body
+            tableBody.appendChild(row);
+    
+            // Increment counter for next row
+            counter++;
+        }
+    
+        // Function to edit a booking row
+        function editBooking(button) {
+            const row = button.closest('tr');
+            const inputs = row.querySelectorAll('input');
+    
+            if (button.textContent === 'Edit') {
+                // Enable inputs for editing
+                inputs.forEach(input => input.disabled = false);
+                button.textContent = 'Save';
+            } else {
+                // Save changes and disable inputs
+                inputs.forEach(input => input.disabled = true);
+                button.textContent = 'Edit';
+            }
+        }
+    
+        // Function to delete a booking row
+        function deleteBooking(button) {
+            const row = button.closest('tr');
+            row.remove();
+    
+            // Adjust row numbers after deletion
+            const rows = document.querySelectorAll('#reservationTableBody tr');
+            counter = 1;
+            rows.forEach(row => {
+                row.querySelector('td:first-child').textContent = counter;
+                counter++;
+            });
+        }
+    
+        // Attach form submission to adding a booking
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+    
+            const place = document.getElementById('placeName').value;
+            const hotels = document.getElementById('hotelsName').value;
+            const numberOfGuests = document.getElementById('numGuests').value;
+            const arrivalDate = document.getElementById('arrivalDate').value;
+            const leavingDate = document.getElementById('leavingDate').value;
+    
+            // Add the booking to the table
+            addBookingToTable(place, hotels, numberOfGuests, arrivalDate, leavingDate);
+    
+            // Notify the user
+            alert('You booked successfully!');
+    
+            // Optionally, reset the form
+            e.target.reset();
+        });
+    
+        // Example: Adding a booking entry dynamically
+        addBookingToTable('Batangas', 'Verde View Villas', 3, '2024-12-10', '2024-12-15');
+        addBookingToTable('Palawan', 'Oasis Resort', 5, '2024-12-16', '2024-12-20');
+        addBookingToTable('Taytay', 'None', 8, '2024-10-16', '2024-10-24');
+        addBookingToTable('Palawan', 'Resort', 5, '2024-12-12', '2024-12-20');
+    </script>
+    
+    </div>
+
+</section>
+
+<!-- book information section ends -->
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading wow fadeIn">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container owl-carousel first_carousel">
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-1.jpg" data-lightbox="image-1" data-title="Taal Volcano"><img src="images/pp-1.jpg" alt="image"></a>
+            <div class="content">
+                <h5> <i class="fas fa-map-marker-alt"></i> Taal Volcano </h5>
+                <p>Taal Volcano is located about 60 km (about 37 miles) south of Metro Manila. Last major eruption was reported back in 1965 that affected villages in the surrounding area.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱9,661 <span>₱12,00.00</span> </div>
+                <a href="#reserve" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-2.jpg" data-lightbox="image-1" data-title="Caleruega"><img src="images/pp-2.jpg" alt="image"></a>
+            <div class="content">
+                <h5> <i class="fas fa-map-marker-alt"></i> Caleruega </h5>
+                <p>This church is on top of the hill in nasugbu, batangas, it is good for a wedding venue for its perfect view. Caleruega church is also known as the Transfiguration Chapel. </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱400.00 <span>₱560.00</span> </div>
+                <a href="#reserve" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-3.png" data-lightbox="image-3" data-title="J Castles Theme Park"><img src="images/pp-3.png" alt="image"></a>
+            <div class="content">
+                <h5> <i class="fas fa-map-marker-alt"></i> J Castles Theme Park </h5>
+                <p>Enjoy an exclusive bundle pass to 19 Exhibits and gush over the wonders and attractions that Studio and Pop Castle have to offer</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱899.00 <span>₱999.00</span> </div>
+                <a href="#reserve" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+            <a href="images/pp-4.png" data-lightbox="image-4" data-title="Palm Beach Resort"><img src="images/pp-4.png" alt="image"></a>
+            <div class="content">
+                <h5> <i class="fas fa-map-marker-alt"></i> Palm Beach Resort </h5>
+                <p>Rediscover paradise with your loved ones at Palm Beach Resort in Batangas, just a few hours away from Manila</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱6,789.00 <span>₱8,000.00</span> </div>
+                <a href="#reserve" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- section item start  -->
+
+<div class="box-container secound_carousel owl-carousel ">
+    <div class="box wow fadeInUp" data-wow-duration="2s">
+        <a href="images/pp-5.png" data-lightbox="image-1" data-title="Water Diver Course"><img src="images/pp-5.png" alt="image"></a>
+        <div class="content">
+            <h5> <i class="fas fa-map-marker-alt"></i> Water Diver Course </h5>
+            <p>Learn from a scuba diving expert and carry the world's most recognized scuba certification. </p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="price"> ₱27,500.00 <span>₱30,00.00</span> </div>
+            <a href="#reserve" class="btn">book now</a>
+        </div>
+    </div>
+
+    <div class="box wow fadeInUp" data-wow-duration="2s">
+        <a href="images/pp-6.png" data-lightbox="image-3" data-title="Farm at San Benito"><img src="images/pp-6.png" alt="image"></a>
+        <div class="content">
+            <h5> <i class="fas fa-map-marker-alt"></i> Farm at San Benito </h5>
+            <p> The Farm at San Benito's incredible facilities might convince you to finally take a well-deserved break.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="price"> ₱38,999 <span>₱44,00.00</span> </div>
+            <a href="#reserve" class="btn">book now</a>
+        </div>
+    </div>
+
+    <div class="box wow fadeInUp" data-wow-duration="2s">
+        <a href="images/pp-7.png" data-lightbox="image-4" data-title="Aquaria Water Park"><img src="images/pp-7.png" alt="image"></a>
+        <div class="content">
+            <h5> <i class="fas fa-map-marker-alt"></i> Aquaria Water Park </h5>
+            <p>Go for an exciting tropical getaway of pure water fun at Aquaria Water Park in Calatagan, Batangas!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="price"> ₱1,045.00 <span>₱2,100.00</span> </div>
+            <a href="#reserve" class="btn">book now</a>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- packages section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+<h1 class="heading wow fadeIn">
+    <span>s</span>
+    <span>e</span>
+    <span>r</span>
+    <span>v</span>
+    <span>i</span>
+    <span>c</span>
+    <span>e</span>
+    <span>s</span>
+</h1>
+
+
+<div class="box-container">
+
+    <div class="box wow fadeInUp" data-wow-duration="2s">
+      
+        <i class="fas fa-hotel" style="font-size: 30px;"></i>
+       
+            <h3>Affordable Hotels</h3>
+            <p>Batangas offers budget-friendly accommodations, 
+                from cozy inns to beachside resorts, catering to travelers who want comfort without overspending.</p>
+                <button onclick="showModal('modalHotels')">Show More</button>
+            </div>
+    
+        
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+          
+            <i class="fas fa-utensils"style="font-size: 30px;"></i></i>
+            <h3>famous food</h3>
+            <p>Batangas is famous for its local delicacies like Bulalo, Kapeng Barako, and Lomi. It offers a gastronomic
+                 experience filled with authentic flavors and refreshing drinks unique to the province.</p>
+                 <button onclick="showModal('modalFood')">Show More</button>
+                </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+           
+            <i class="fas fa-bullhorn"style="font-size: 30px;"></i></i>
+            <h3>tour guides</h3>
+            <p>A tour guide ensures that tourists can enjoy Batangas responsibly, highlighting tips for safe hiking 
+                (e.g., Taal Volcano), swimming in beaches, and observing local customs and regulations.</p>
+                <button onclick="showModal('modalSafety')">Show More</button>
+            </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+          
+            <i class="fas fa-globe-asia"style="font-size: 30px;"></i></i>
+            <h3>Around the World</h3>
+            <p>Batangas showcases a variety of attractions that offer global appeal—pristine beaches, 
+                historical landmarks, and cultural experiences that rival international destinations.</p>
+                <button onclick="showModal('modalAround')">Show More</button>
+            </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+      
+            <i class="fas fa-plane"style="font-size: 30px;"></i></i>
+            <h3>Fastest Travel</h3>
+            <p>With its proximity to Metro Manila, Batangas is accessible via expressways and well-maintained
+                 roads, making it a top destination for quick weekend getaways.</p>
+                 <button onclick="showModal('modalTravels')">Show More</button>
+                </div>
+        <div class="box wow fadeInUp" data-wow-duration="2s">
+           
+            <i class="fas fa-hiking"style="font-size: 30px;"></i></i>
+            <h3>Adventures</h3>
+            <p>Batangas is a haven for thrill-seekers, offering activities like scuba diving in Anilao, 
+                hiking in Mt. Maculot, exploring heritage sites, and island-hopping adventures.</p>
+                <button onclick="showModal('modalAdventures')">Show More</button>
+                
+                    
+            </div>
+        
+        </div>
+</div>
+
+
+<header class="wow fadeInDown" data-wow-duration="4s" >
+<div class="modal-overlay" id="modalOverlay"></div>
+<!-- Modal Container -->
+<div id="modalContainer" class="modal hidden"> 
+    
+    <button id="closeModalBtn" class="close-btn">X</button>
+    
+    <div id="modalContent">
+       
+        <!-- The packages section will be dynamically displayed here -->
+    </div>
+</div>
+<script>
+
+// Function to show the modal and inject content
+function showModal(serviceId) {
+    const modal = document.getElementById('modalContainer');
+    const modalContent = document.getElementById('modalContent');
+    const overlay = document.getElementById('modalOverlay');
+
+    // Clear any previous content
+    modalContent.innerHTML = '';
+
+    // Load the corresponding content based on the `serviceId`
+   
+    switch (serviceId) {
+        case 'modalHotels':
+            modalContent.innerHTML = `
+              
+                  <h1 class="heading">
+                   <span>a</span>
+                   <span>f</span>
+                   <span>f</span>
+                   <span>o</span>
+                   <span>r</span>
+                   <span>d</span>
+                   <span>a</span>
+                   <span>b</span>
+                   <span>l</span>
+                   <span>e</span>
+                   <span class="space"></span>
+                   <span>h</span>
+                   <span>o</span>
+                   <span>t</span>
+                   <span>e</span>
+                   <span>l</span>
+                   <span>s</span>
+                    </h1>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot1..png" alt="Dahilig Resort" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Dahilig Resort </h3> 
+                        <p> GREAT FOR FAMILY </p>
+                        <p> PET FRIENDLY </p>
+                        <p> IN: 14:00 OUT: 12:00 </p>
+                        <p>- GX6C+83J Kabilang Gulod, Western Nautical Hwy, Puerto Galera, 5203, Philippines</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱746.00 <span> ₱998.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                      </div>
+                      
+  
+                   <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot2.png" alt="Sabang Oasis Resort" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Sabang Oasis Resort </h3> 
+                        <p> -Free Cancellation </p>
+                        <p> -Meals not included </p>
+                        <p> IN: 14:00 OUT: 12:00 </p>
+                         
+                        <p>- Sabang Beach, Puerto Galera, 5203, Philippines</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱1790.00 <span> ₱1998.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                      </div>
+                  <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot3.png" alt="Verde View Villas" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Verde View Villas </h3> 
+                        <p> -Non Refundable </p>
+                        <p> -Breakfast Included </p>
+                        <p> IN: 14:00 OUT: 12:00 </p>
+                       
+                        <p>- Captain Gregg's, Sabang, Mindoro Oriental, Puerto Galera, 5203, Philippines</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱3146.00 <span> ₱3798.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                      </div>
+                      <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot4.png" alt="Blue Crystal Beach Resort" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Blue Crystal Beach Resort </h3> 
+                        <p> -Non Refundable </p>
+                        <p> -Meals not Included </p>
+                        <p> IN: 14:00 OUT: 12:00 </p>
+                       
+                        <p>- Palangan, Puerto Galera, 5203, Philippines| 1.60 km from Sabang Beach</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱2270.00 <span> ₱2598.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                        </div>
+                        <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot5.png" alt="Amami Beach Resort" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Amami Beach Resort </h3> 
+                        <p> -Free Cancellation </p>
+                        <p> -Breakfast Included </p>
+                        <p> IN: 15:00 OUT: 11:00 </p>
+                       
+                        <p>-Western Nautical Hwy, Abra de Ilog, 5203, Philippines | 17.54 km from city centre</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱1037.00 <span> ₱2339.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot6.png" alt="Out of the Blue Resort" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Out of the Blue Resort </h3> 
+                        <p> -Non Refundable </p>
+                        <p> -BreakfastIncluded </p>
+                        <p> IN: 14:00 OUT: 11:00 </p>
+                       
+                        <p>- Small La Laguna Beach, Puerto Galera, 5203, Philippines | 0.65 km from Sabang Beach</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱746.00 <span> ₱998.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/hot8.png" alt="Victoria's Bed & Breakfast" style="width: 50%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 40%;">
+                         <h3> <i class="fas fa-map-marker-alt"></i> Victoria's Bed & Breakfast </h3> 
+                        <p> -free Cancellation </p>
+                        <p> -Breakfast Included </p>
+                        <p> IN: 13:00 OUT: 12:00 </p>
+                       
+                        <p>- Western Nautical Highway, Puerto Galera, 5302, Philippines | 0.41 km from Puerto Galera White Beach</p>
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱746.00 <span> ₱998.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+
+                    </div>
+                       </div>
+                </section>
+            `;
+            break;
+
+        case 'modalFood':
+            modalContent.innerHTML = `
+                <section class="packagess">
+                    <h1 class="heading">
+                   <span>f</span>
+                   <span>a</span>
+                   <span>m</span>
+                   <span>o</span>
+                   <span>u</span>
+                   <span>s</span>
+                   <span class="space"></span>
+                   <span>f</span>
+                   <span>o</span>
+                   <span>o</span>
+                   <span>d</span>
+                    </h1>
+                        <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food1.png" alt="Lomi Batangas" style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3> Lomi Batangas </h3> 
+                    <p><i class="fas fa-map-marker-alt"></i> City of Lipa in Batangas can be found throughout the province</p>
+
+                        <p> The Filipino dish Lomi Batangas is a variation of lomi soup made with pork bones, onions, peppers, 
+                            pork meat, pork levers, kikiam, eggs, pork rinds, ground pork, onions, garlic, pepper, and eggs. With 
+                            a dip consisting of soy sauce, onions, chiles, and calamasi, it is typically consumed.  </p>
+                        
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+                 <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food2.png" alt=" Batangas Bulalo " style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3> </i> Batangas Bulalo </h3> 
+                         
+                         <p><i class="fas fa-map-marker-alt"></i>Provinces of Batangas and Cavite in the Philippines’ Southern Luzon region</p>
+                         <p> Cooking bulalo appears to be rather simple. Beef shanks cooked for several hours in a tasty stock seasoned with black pepper, garlic, onions,
+                             and salt are its major and most distinctive component. Usually, pechay (Chinese cabbage), potatoes, and even corn are used in the dish. </p>
+                        
+                        
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food3.png" alt="Gotong Batangas" style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3>  Gotong Batangas </h3> 
+                        <p><i class="fas fa-map-marker-alt"></i>Lipa City, Batangas, and more specifically the Lipa Public Market </p>
+                            
+                            <p>This meal is quite reminiscent of “beef papaitan,” which is a beef innards soup. Typically, cow tripe and a combination of other 
+                                innards, including beef intestines, kidney, heart, and liver, are employed. However, some also used beef skin and cow head
+                                 components like the mouth and cheeks.  </p>
+                        
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food4.png" alt="Adobo sa Dilaw" style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3> Adobo sa Dilaw </h3> 
+                          <p><i class="fas fa-map-marker-alt"></i>A variety of restaurants in the municipalities of Taal and Lemeryt </p>
+                        <p> A dish called adobo sa dilaw, on the other hand, is completely different just by its name. Although the 
+                            general cooking procedure is the same, turmeric, or what is known as “yellow ginger” in Batangas, is 
+                            the ingredient that gives this meal its distinctive yellow hue, this is why it became one of the
+                             well-known delicacies in Batangas </p>
+                        
+                       
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food5.png" alt="Panutsa" style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3> Panutsa </h3> 
+                          <p><i class="fas fa-map-marker-alt"></i>Farmed in Batangas, as opposed to the panutsa from Baguio </p>
+                        <p> The Taal treat can be recognized by the thicker consistency and distinctive black color of the sugar
+                             mixture. The native panutsa is a tasty treat that makes you feel more energized! It will distract 
+                             you from the bumper-to-bumper traffic. </p>
+                        
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/food6.png" alt="Tamales" style="width: 90%; "height: 40%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 90%;">
+                         <h3>Tamales </h3> 
+                         <p><i class="fas fa-map-marker-alt"></i>Tamales ng Ibaan, a common rice cake in the Philippines</p>
+                        <p>Tamales ng Ibaan would undoubtedly be a dish that can sate your hunger for finger food. If a typical
+                             Filipino has only heard the word “tamales” through pop culture allusions, they may not be 
+                             familiar with these Batangas delicacies. But you surely wouldn’t want to miss out on this cuisine.  </p>
+                        
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+
+                <a href="#" class="btn">see more</a>
+
+                    </div>
+
+                    </div>
+                </section>
+            `;
+            break;
+
+            case 'modalSafety':
+            modalContent.innerHTML = `
+                <section class="packagess" >
+                   <h1 class="heading">
+                   <span>t</span>
+                   <span>o</span>
+                   <span>u</span>
+                   <span>r</span>
+                   <span class="space"></span>
+                   <span>g</span>
+                   <span>u</span>
+                   <span>i</span>
+                   <span>d</span>
+                   <span>e</span>
+                   <span>s</span>
+                    </h1>
+                         <div class="box-container" style="width: 100%;"border-radius: 5px; "align-items:center;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/eff.jpg" alt="ALQUIZAR, EFFEL JOY" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">  
+                         <h3>ALQUIZAR, EFFEL JOY </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> Sa imung hart! </p>
+                         <br>
+                        <p> "Come and explore the Batangas, Philippines with me, your travel buddy:) " </p>
+                        <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                    <p> GROUP LEADER </p>
+                </div>
+                </div>
+                         <div class="box-container" style="width: 100%;"border-radius: 5px; "align-items:center;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/VIN.jpg" alt="ANTONIO, NEIL VINCENT" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         
+                         <h3>ANTONIO, NEIL VINCENT</h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> dyan lng </p>
+                       
+                        <p> "Embark on an unforgettable journey where every step tells a story, and every destination leaves you inspired. " </p>
+                        <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                        </div>
+                         <div class="box-container" style="width: 100%;"border-radius: 5px; "align-items:center;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/pic66.jpg" alt="ANGELES, CHRISTIAN REIGN" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <br>
+                         <h3>ANGELES, CHRISTIAN REIGN</h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> Secret! </p>
+                         <br>
+                         <br>
+                        <p> "Discover the beauty of the world with us, where every moment is an adventure waiting to unfold." </p>
+                        <br>
+                        <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                        </div>
+                    <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/pic66.jpg" alt="BELARDO, ERICA" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>BELARDO, ERICA </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> tabi lng ya </p>
+                         <br>
+                         <br>
+                         <br>
+                        <p> "Guiding you to breathtaking landscapes and hidden gems, making every trip one to remember." </p>
+                        <br>
+                        <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                        </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/DAI.jpg" alt="DEJARLO, DAISY" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>DEJARLO, DAISY </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> wagna baka alam mo </p>
+                         <br>
+                         <br>
+                          <br>
+                           <br>
+                         <br>
+                        <p> "From the bustling streets to serene escapes, let us turn your travel dreams into extraordinary realities." </p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                         <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/sto.jpg" alt="DOMINGO, MARLYN STO" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>DOMINGO, MARLYN STO </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> ay curious?! </p>
+                         <br>
+                         <br>
+                          <br>
+                        <p> "Explore the wonders of the world through our eyes and create memories that last a lifetime." </p>
+                        <br>
+                        <br>
+                         <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                 <div class="price"> ₱500.00 <span></span> </div>
+
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/ange.jpg" alt="GACUSAN ,ANGELA" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>GACUSAN ,ANGELA</h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> taga samin par </p>
+                         
+                        <p>"Let me lead the way to experiences you’ve always dreamed of, and those you never knew existed." </p>
+                       <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/rus.jpg" alt="FUENTES, RUSTY" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>FUENTES, RUSTY </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> dyan sa may irereto ka mars? </p>
+                       <br>
+                       <br>
+                        <p> "Step beyond the ordinary and into a world of discovery, where every trip is a story worth sharing." </p>
+                        <br>
+                        <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/star.jpg" alt="MAGDULA, STARLEO" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>MAGDULA, STARLEO </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> hatdog </p>
+                         <h3> </h3> 
+                        <p> "Join me on a journey where history comes alive, culture captivates, and nature amazes." </p>
+                        <br>
+                        
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/mj.jpg" alt="ODTOJAN,MELJEAN" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>ODTOJAN,MELJEAN </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> tagakasiglahan </p>
+                     <br>
+                      <br>
+                     <br> 
+                        <p>"More than just a guide—your partner in exploring, learning, and loving the beauty of the world."</p>
+                        <br>
+                        <br>
+                        <br>
+                         <br>
+                         <p> - rating - </p>
+                        
+ 
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/mar.jpg" alt="PEDREGOSA, MARICAR" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>PEDREGOSA, MARICAR </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> sa amin </p>
+                        <br>
+                         <br>
+                        <br>
+                        <p> "Experience travel as it should be—authentic, adventurous, and tailored just for you." </p>
+                        <br>
+                        <br>
+                        <br>
+                         <br>
+                         <p> - rating - </p>
+
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                </div>
+                </div>
+                         <div class="box-container" style="border-radius: 5px;" "box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                        <img src="images/jm.jpg" alt="JOHN MARK,VILLANUEVA" style="width: 40%; "height: 30%;" border-radius: 5px;">
+                     <div class="box-descriptionn"style="width: 50%;">
+                         <h3> </h3> 
+                         <h3>JOHN MARK,VILLANUEVA </h3> 
+
+                         <p><i class="fas fa-map-marker-alt"></i> qupaaal </p>
+                         
+                         <br>
+                         <br>
+                        
+                        <p> "Experience the extraordinary, every step of the way." </p>
+                        <br>
+                         <br>
+                        <br>
+                         <p> - rating - </p>
+
+                       
+                        <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <div class="price"> ₱500.00 <span></span> </div>
+                
+             
+                    </div>
+                </section>
+            `;
+            break;
+            case 'modalAround':
+            modalContent.innerHTML = `
+                 
+            
+                    <div class="box-txtxt"style="width: 100%; "border-radius: 20px">
+                              <h3 class="travel-guides">
+                      A R O U N D <span class="space"></span> T H E <span class="space"></span>W O R L D</h3>          
+                        <iframe
+                                src="https://www.agoda.com/travel-guides/"
+                                width="100%" 
+                                height="600" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                
+                        </div>        
+                
+            </section>
+        
+ 
+                
+            `;
+            break;
+            case 'modalTravels':
+            modalContent.innerHTML = `
+               
+                     <h1 class="heading">
+                   <span>f</span>
+                   <span>a</span>
+                   <span>s</span>
+                   <span>t</span>
+                   <span>e</span>
+                   <span>s</span>
+                   <span>t</span>
+                   <span class="space"></span>
+                   <span>t</span>
+                   <span>r</span>
+                   <span>a</span>
+                   <span>v</span>
+                   <span>e</span>
+                   <span>l</span>
+                    </h1>
+                    
+                     <div class="box-descriptionnN"style="border-radius: 20px;"">
+                            <div class="maps-container"style="width: 100%; "height: 500%;" "border-radius: 20px;""box-shadow: 0 2rem 3rem rgba(0,0,0,.1);">
+                                        
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31268.543342165833!2d120.66151828085936!3d13.804799275527196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd8ba4bdf5ff3f%3A0xe46d7460c19e65c4!2sBatangas%20Province!5e0!3m2!1sen!2sph!4v1690198076853!5m2!1sen!2sph"
+                                width="100%" 
+                                height="500" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               
+                        </div>
+                        <div class="box-descriptionnN" style="width: 100%;">
+                        <h3><i class="fas fa-map-marker-alt"></i> ABOUT BATANGAS. </h3> 
+                    
+                  
+                        <p> Our city map of Batangas City (Philippines) shows 1,254 km of streets and paths. 
+                            If you wanted to walk them all, assuming you walked four kilometers an hour, eight hours a day,
+                             it would take you 39 days. And, when you need to get home there are 165 bus and tram stops, and subway and railway stations in Batangas City. " </p>
+                        <p>With a total area of 0.1 square kilometers, public green spaces and parks make up 0.02% of Batangas City’s total area,
+                             605 square kilometers. That means each of Batangas City’s 329,874 residents has an average of 0.4 square meters.</p>
+                         <p>When people in Batangas City want to go out, they are spoilt for choice; our map shows more than 18 cafés, restaurants, bars, 
+                            ice-cream parlors, beer gardens, cinemas, nightclubs and theatres. The city also boasts more than 38 sights and monuments, and far more 
+                            than 1,373 retailers. Feeling tired? Our map shows more than 47 hotels and guest houses, where you can rest.</p>
+
+                </div>
+                <h3 class="travel-guides">
+                       <span class="space"></span> How to Get to Batangas? </h3>   
+                <p>The main jump-off point to Batangas is Manila in Luzon, which is around 100km away by land travel. 
+                    Here are your options on how to go to Batangas. </p>
+                  <h3>Private Vehicles and Public Bus </h3>
+                <p>Traveling by land is the most preferred way of going to Batangas. For private vehicles, you need to pass through the South Luzon Expressway 
+                    (SLEX) going to STAR Tollway before exiting at various towns and cities in Batangas.For commuters, there are many bus companies bound for Batangas via major terminals 
+                    in Pasay (Buendia-Taft) and Araneta Center Bus Terminal in Cubao, Quezon City. </p>
+                     <div class="box-container">
+                    <img src="images/land.png" alt="Private Transpo" style="width: 70%;" "height: 70%;" border-radius: 5px;">
+                </div>
+
+                    <h3>By Sea: Batangas Port </h3> 
+                <p>The Batangas Port is one of the biggest in the country and is the terminal for RORO (Roll-on/Roll-off) services to and from Calapan in Oriental Mindoro, 
+                Abra de Ilog in Occidental Mindoro and ferry services to Romblon and Caticlan Port (gateway to Boracay). </p>
+                <div class="box-container">
+                    <img src="images/sea.png" alt="private transpo" style="width: 70%;" "height: 70%;" border-radius: 5px;">
+                </div>
+
+                    <h3>By Air (Outside of Manila) </h3> 
+                <p>The nearest airport to Batangas is the Philippines’ main airport hub of Ninoy Aquino International Airport (NAIA) in Metro Manila. The airport’s terminals 1, 2 and 3 and the Domestic Airport 
+                    Terminal 3 are in Pasay City. Upon arriving at these airports, you will then take a three-hour land trip to Batangas. </p>
+                    <div class="box-container">
+                    <img src="images/air.png" alt="private transpo" style="width: 70%;" "height: 70%;" border-radius: 5px;">
+               </div>
+                
+
+           </div>
+                </section>
+            `;
+            break;
+            case 'modalAdventures':
+            modalContent.innerHTML = `
+                
+                    <h1 class="heading">
+                   <span>a</span>
+                   <span>d</span>
+                   <span>v</span>
+                   <span>e</span>
+                   <span>n</span>
+                   <span>t</span>
+                   <span>u</span>
+                   <span>r</span>
+                   <span>e</span>
+                   <span>s</span>
+                    </h1>
+                         <div class="box-container">
+                        <img src="images/adv1.png" alt="Private Transpo" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Private Transpo</h3>
+                        <p> Hop on a private transfer that can take you across must-see locations in Luzon.
+                            Choose from three types of vehicles that can accommodate a group of 3 up to a large group of 10.
+                            Sit back and relax as your expert driver will bring you to your destination safely. </p>
+                            
+                    <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱900.00 - <span> ₱1500 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                   <div class="box-container">
+                        <img src="images/adv2.png" alt="Open Water Diver Course" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Open Water Diver Course</h3>
+                        <p>Gain more diving experience,Practice navigation,Sample different types of diving,Explore deeper than 18m/60ft,
+                            Improve your buoyancy,Use a compass and Open Water Diver Certification is REQUIRED.
+                            </p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱2900.00 -<span> ₱3200.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                 <div class="box-container">
+                        <img src="images/adv3.png" alt="Aquaria Water Park" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Aquaria Water Park</h3>
+                        <p>Feel relaxed and experience luxury at its best at a 1.2-hectare world-class leisure property.
+                            Bask in the sun while enjoying the fine beach stretch with the most stunning views of the sea.
+                            Get an all-day access to the resort's giant slide and cove pools perfect for kids and adults.</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱1500.00 -<span> ₱20000.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                   <div class="box-container">
+                        <img src="images/adv4.png" alt="Laiya Beach Club" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Laiya Beach Club</h3>
+                        <p>Let the sun reign and the good times roll as you come and join the fun at Laiya Beach Club!
+                            Get lost in comfort, enjoy a moment to yourself, and unwind in your own cozy sanctuary.
+                            Enjoy an all-day access and experience the excitement that awaits you!</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱10000.00 -<span> ₱15000</span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv5.png" alt="Day Hike Mt. Batulao" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Day Hike Mt. Batulao</h3>
+                        <p>if you like the idea of hiking but don’t have much (or any!) experience, this day hike to Mt. Batulao is ideal.
+                             The 2660-foot (811-meter) mountain is easily accessible from Manila, making it a handy full-day trip from the city.
+                              Hike along well-established trails to incredible viewpoints. </p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱22000.00 -<span> ₱25000.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv6.png" alt="A Hidden Waterfalls" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>A Hidden Waterfalls</h3>
+                        <p>This is a brand new tour showcasing taal volcano plus a beautiful hidden falls in the area.
+                            you will get to ride a local boat which will cruise around the taal volcano island
+                            during the boat cruise you will see how the locals live their lives and marvel at the beautiful scenery that the volcano has produced.</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱800.00 -<span> ₱1500.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv7.png" alt="Milea Bee Farm" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Milea Bee Farm</h3>
+                        <p>Milea Bee Farm is not not your typical, manicured farm. You will be visiting a small farm dedicated 
+                            for the propagation and care of various species of honey producing bees.
+                             It is situated in a secluded area with no neighbours and without electricity, and it's a five minute walk from the parking area. </p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱150.00 -<span> ₱300.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv8.png" alt="Walled City" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Walled City</h3>
+                        <p>Visit the Famous Old Manila also know as the "Walled City or Intramuros" and have a walk tour to 
+                            see some old fortress and churches inside the historical city, driving from Manila it will 
+                            take you to Tagaytay City and have a look to the famous "Taal Volcano". </p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱300.00 -<span> ₱500.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv11.png" alt="Mountain Biking" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Mountain Biking</h3>
+                        <p>Bring your mountain bike and test your limits in our raw and gritty Greenway Mountain Bike Trail! 
+                            Join our time trial competition and shatter the leaderboards as you push the pedal!</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱746.00 -<span> ₱998.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv9.png" alt="Overnight Camping" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Overnight Camping</h3>
+                        <p>Put your tents up by the lake for a safe and exclusive camping at Amore Point. With a mesmerizing view, 
+                            secured location, and ample space for your family's activities, this is surely a bonding experience you won't forget.</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱100.00 -<span> ₱300.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        <div class="box-container">
+                        <img src="images/adv10.png" alt="Sky Adventures" style="width: 50%;" "height: 70%;" border-radius: 5px;">
+                     <div class="box-description" style="width: 40%;">
+                        <h3>Sky Adventures</h3>
+                        <p>See the Taal Volcano from a very mesmerizing, unique, aerial perspective aboard our state-of-the-art helicopter.</p>
+                            <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> ₱10000.00 -<span> ₱15000.00 </span> </div>
+                <a href="#reserve" class="btn">book now</a>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+            break;
+        // Add cases for other service modals
+    
+        default:
+            modalContent.innerHTML = '<p>Content not available.</p>';
+            break;
+    }
+
+    // Show the modal
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+// Close the modal
+document.getElementById('closeModalBtn').addEventListener('click', () => {
+        const modal = document.getElementById('modalContainer');
+        const overlay = document.getElementById('modalOverlay');
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+
+    // Close modal and overlay when overlay is clicked
+    document.getElementById('modalOverlay').addEventListener('click', () => {
+        const modal = document.getElementById('modalContainer');
+        const overlay = document.getElementById('modalOverlay');
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+
+
+</script>
+
+</section>
+</div>
+<!-- services section ends -->
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <video src="images/con1.mp4" id="videos-slider" loop autoplay muted></video>
+        </div>
+
+        <form action="https://formsubmit.co/effel.joy.alquizar@student.pnm.edu.ph" method="POST">
+            <div class="inputBox">
+                <input type="text" name="name" placeholder="Name:" required>
+                <input type="email" name="email" placeholder="Email:" required>
+            </div>
+            <div class="inputBox">
+                <input type="number" name="number" placeholder="Number:" required>
+                <input type="text" name="subject" placeholder="Subject:" required>
+            </div>
+            <textarea name="message" placeholder="Message:" rows="6" required></textarea>
+        
+            <!-- Hidden fields for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false"> 
+            <input type="hidden" name="_next" value="http://localhost/batangaswebsite/thanks.html"> <!-- Optional: Redirect URL after submission -->
+            <input type="hidden" name="_autoresponse" value="your messege sent successfully">
+            <input type="submit" class="btn btn-submit" value="Send Message">
+         
+
+        </form>
+        
+    </div>
+</section>
+
+
+<!-- contact section ends -->
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p> WE ARE GROUP DSA FROM 2C BSCPE 2ND YEAR COLLEGE STUDENT FROM COLEGIO DE MONTALBAN </p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">BATANGAS CITY</a>
+            <a href="#">NASUGBO</a>
+            <a href="#">CALATAGAN</a>
+            <a href="#">SAN JUAN</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>  
+            <a href="https://www.facebook.com/EJAlquizar">facebook</a>
+            <a href="https://www.instagram.com/robin_chwaa/profilecard/?igsh=OGl3ajRhcWpsaXpi">instagram</a>
+            <a href="https://x.com/missalquizar_?t=rdTSxKt6nAMR96TS3ogvVw&s=09">twitter</a>
+            <a href="https://www.raket.ph/joyalquizar14">Raket.ph</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> alquizarjoy  </span> | all rights reserved! </h1>
+
+</section>
+<!-- top to bottom scrolling  -->
+<div id="totopscroller"></div>
+<!-- preloader  -->
+<div class="fakeLoader"></div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jaquery cdn  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Load ripples plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+<!-- swiper-bundle.min.js -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- wow js -->
+<script src="js/wow.min.js"></script>
+<!-- lightbox.js -->
+<script src="js/lightbox.js"></script>
+<script src="js/adminbox.js"></script>
+<!-- owl.carousel.min.js -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- top to bottom  -->
+<script src="js/jquery.totop.js"></script>
+<script src="js/fakeLoader.min.js"></script>
+<!-- scroling aos js  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+
+<script>
+    // owl carousel
+    $('.first_carousel').owlCarousel({
+    autoplay:true,
+    margin:10,
+    smartSpeed: 1000,
+    nav:true,
+    responsiveClass:true,
+
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+           
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:false,
+            loop:true,
+          
+        }
+    }
+})
+
+        
+    
+// secound carousel 
+ // owl carousel
+ $('.secound_carousel').owlCarousel({
+    autoplay:true,
+    rtl:true,
+    nav:true,
+    margin:10,
+    responsiveClass:true,
+    smartSpeed: 1000,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+           
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:true,
+          
+        }
+    }
+})
+
+// top ot bottom 
+$(function(){
+    $('#totopscroller').totopscroller({
+        URL:'http://localhost/batangaswebsite/admin.html'
+});
+})
+
+// wow js 
+
+// preloader
+$.fakeLoader();
+
+// aos scrolling  
+AOS.init();
+  //  water Remote Playback
+    $('.water').ripples({
+
+      // Image Url
+      imageUrl: null,
+
+      // The width and height of the WebGL texture to render to. 
+      // The larger this value, the smoother the rendering and the slower the ripples will propagate.
+      resolution: 256,
+
+      // The size (in pixels) of the drop that results by clicking or moving the mouse over the canvas.
+      dropRadius: 20,
+
+      // Basically the amount of refraction caused by a ripple. 
+      // 0 means there is no refraction.
+      perturbance: 0.04,
+
+      // Whether mouse clicks and mouse movement triggers the effect.
+      interactive: true,
+
+      // The crossOrigin attribute to use for the affected image. 
+      crossOrigin: ''
+    });
+   
+</script>
+<script>
+    $(document).ready(function() {
+       // Apply ripples effect (ensure the correct selector)
+       $('selector').ripples();  // Corrected to use a semicolon
+    });
+    
+
+</script>
+
+</body> 
+</html>
+
+</body>
+</html>
