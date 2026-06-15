@@ -32,7 +32,7 @@ This project marks the beginning of my journey in web development and demonstrat
 Author: Effel Joy Alquizar
 Course: Bachelor of Science in Computer Engineering (BSCpE)
 Project Type: Academic Tourism Website Project
-OUTCOME: file:///D:/Website/batangaswebsite/index.html 
+OUTCOME: https://joyalquizar.github.io/Batangas-Website-Unveiling-the-Beauty-of-Batangas/
 
 
 <img width="1896" height="997" alt="image" src="https://github.com/user-attachments/assets/b8bb9d43-ce06-461d-a5c2-20268b99e85b" />
