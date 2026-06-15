@@ -1,0 +1,2 @@
+# Batangas-Website-Unveiling-the-Beauty-of-Batangas
+My first web development project showcasing the tourist attractions, culture, and history of Batangas Province.  ## Technologies Used - HTML - CSS - Java - PHP - MySQL - VS Code - XAMPP  ## Features - Tourism information - Tourist destination showcase - Responsive design - Database integration  ## Author Effel Joy Alquizar BS Computer Engineering
