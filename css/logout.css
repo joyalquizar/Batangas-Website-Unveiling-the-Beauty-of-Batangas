@@ -1,0 +1,552 @@
+/* Style for the logout button */
+/* styles.css */
+
+
+/* Style for the logout buttoh4n */
+.logout-button {
+    background-color: transparent; /* Transparent background to blend with the header */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    font-size: 18px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 5px 10px; /* Add padding for spacing */
+    margin-left: 15px; /* Space from adjacent elements */
+    transition: color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  /* Hover effect for the button */
+  .logout-button:hover {
+    color: #FFD700; /* Gold color on hover */
+    text-decoration: underline; /* Underline for emphasis */
+  }
+  
+  /* Focus effect */
+  .logout-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px #FFD700; /* Add subtle glow */
+  }
+  
+  button {
+    background-color: transparent; /* Match the transparent background of the header */
+    color: white; /* White text color for visibility */
+    border: none; /* Remove the default button border */
+    font-size: 18px; /* Match the font size of the header links */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    padding: 5px 10px; /* Add some padding for better appearance */
+    margin-left: 10px; /* Add spacing from the adjacent elements */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect */
+  button:hover {
+    color: #FFD700; /* Highlight text in gold on hover */
+    text-decoration: underline; /* Add an underline to emphasize hover */
+  }
+  
+  /* Focus state */
+  button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px #FFD700; /* Add a subtle glow for focus */
+  } 
+  
+  
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    background: #314c03;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 8%;
+  }
+  
+  header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#fff;
+    text-transform: uppercase;
+  }
+  
+  header .logo span{
+    color:var(--yellow);
+  }
+  
+  header .navbar a{
+    color:#fff;
+    
+    font-size: 2rem;
+    margin:0 .8rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(49, 41, 25, 0);
+    transition: all .3s ease-in-out;
+  }
+  
+  header .navbar a:hover{
+    color:var(--yellow);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(29, 174, 180);
+   
+  }
+  
+  header .icons i{
+    font-size: 2.5rem;
+    color:#fff;
+    cursor: pointer;
+    margin-right: 2rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(49, 41, 25, 0);
+    transition: all .3s ease-in-out;
+  }
+  
+  header .icons i:hover{
+    color:var(--yellow);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(29, 165, 202);
+  }
+  
+  header .search-bar-container{
+    position: absolute;
+    top:100%; left: 0; right:0;
+    padding:1.5rem 2rem;
+    background:#333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  header .search-bar-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  header .search-bar-container #search-bar{
+    width:100%;
+    padding:1rem;
+    text-transform: none;
+    color:#333;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+  }
+  
+  header .search-bar-container label{
+    color:#fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+  }
+  
+  header .search-bar-container label:hover{
+    color:var(--yellow);
+  }
+
+
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+  .box button {
+      padding: 10px 20px;
+      background-color: #556b2f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .box button:hover {
+      background-color: #6b8e23;
+  }
+
+/* Modal Container */
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #d6e4e5;
+  width: 300%;
+  max-width: 1100px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  overflow-y: auto; /* Scroll for large content */
+  max-height: 90%;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.modal.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dim background */
+  z-index: 999; /* Below modal */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: block; /* Show overlay */
+  opacity: 1;
+}
+
+/* Close Button */
+
+  #closeModalBtn:hover {
+    color: #FFD700; /* Gold color on hover */
+  text-decoration: underline; /* Underline for emphasis */
+  }
+
+
+
+
+#closeModalBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.packagess .box-container .box-img {
+  max-width: 50%;
+  height: 40%;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3rem 3rem rgba(129, 126, 126, 0.712);
+  border-radius: 10px;
+
+}
+.packagess .box-container {
+  box-shadow: 0 3rem 3rem rgba(129, 126, 126, 0.289);
+  background: #d7eff096;
+  border-radius: 20px;
+  padding-top: 3rem;
+  width: 300%;
+  max-width: 850px;
+  
+}
+
+
+.packagess {
+  align-items: center;
+}
+
+
+
+.box-descriptionn {
+  max-width: 100%;
+  box-shadow: 0 2rem 3rem rgba(70, 56, 56, 0.167);
+  padding-top: 1rem;
+  background: #fffffff6;
+  
+}
+.box-container .box-description {
+  font-size:1.7rem;
+  color:#171515;
+  padding:1rem 0;
+  
+}
+.box-container .box-description h3 {
+  font-size:2.7rem;
+  color:#171515;
+  padding:1rem 0;
+  
+}
+.packagess .box-container .box-description p {
+  font-size: 1.3em;
+  
+  
+}
+.packagess .h3 {
+line-gap-override: 3.5px;
+
+}
+h3 {
+  margin: 10px 0;
+  font-size: 2.5em;
+  font-style:normal;
+  color:red(218, 73, 29);
+  text-align: center;
+
+}
+h4{
+  margin: 10px 0;
+  font-size: 1.5em;
+  font-style:normal;
+  color:#152d0e;
+  text-align: left;
+}
+
+h5{
+    margin: 10px 0;
+    font-size: 2.0em;
+    font-style:normal;
+    color:#152d0e;
+    text-align: left;
+}
+
+p { 
+  color: #555;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color:#465308;
+}
+
+header.header{
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  background: #cee0bb;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+}
+ .box-container .box-descriptionn p{
+  font-size:1.7rem;
+  color:#171515;
+  padding:1rem 0;
+}
+
+.box-container .box-descriptionn {
+  font-size:1.7rem;
+  color:#171515;
+  padding:1rem 0;
+}
+ .box-container .box-descriptionn .stars i{
+  font-size:1.7rem;
+  color:var(--yellow);
+}
+
+.packagess .box-container .box-descriptionn.price{
+  font-size: 2rem;
+  color:#ff0000;
+  padding-top: 1rem;
+}
+ .box-container .box-descriptionn .price span{
+  color:#666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+/* Heading Animation */
+.heading span {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: bold;
+  color: #375006;
+  animation: bounce 1.5s infinite;
+}
+
+.heading .space {
+  display: inline-block;
+  width: 10px;
+}
+
+.heading span:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.heading span:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Map Container */
+.map-container {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 850px;
+  max-height: 850px;
+  
+}
+ .box-descriptionnN p{
+  font-size: 20px;
+  color: #333;
+  align-items: center;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+ 
+}
+.box-descriptionnN {
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.box-descriptionnA {
+  box-shadow: 0 2rem 3rem rgba(70, 56, 56, 0.438);
+  border-radius: 20px;
+  align-items: center;
+}
+
+.box-title .h3 {
+  line-height: 3.8; 
+  color: #007bff;
+  margin-bottom: 10px;
+  line-height: 4.8; 
+}
+ .box-descriptionnN h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 1.8; 
+}
+
+/* Styling the heading */
+.travel-guides {
+  font-family: "Times New Roman", Times, serif; /* Elegant font style */
+  font-size: 30px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase; /* Ensure all letters are uppercase */
+  letter-spacing: 5px; /* Add spacing between letters */
+  text-align: center; /* Center the heading */
+  color: #071e03; /* Dark gray color for text */
+  margin: 20px 0; /* Add space above and below the heading */
+  text-shadow: 2px 2px 5px rgba(158, 201, 17, 0.5);
+}
+
+/* Optional: Add space between "Travel" and "Guides" */
+.travel-guides .space {
+  display: inline-block;
+  width: 20px; /* Adjust the space width as needed */
+}
+
+/* General container styling */
+.reservation-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.241);
+}
+
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Table container */
+#reservationTableContainer {
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.144);
+}
+
+#reservationTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#reservationTable th,
+#reservationTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#reservationTable th {
+  background-color: #2d5207;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.9em;
+}
+
+#reservationTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#reservationTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Buttons inside the table */
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  font-size: 1.0em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
